@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Corpus Christi Dev Solutions | Field Dossier</title>
+    <meta
+      name="description"
+      content="Corpus Christi Dev Solutions presented as a brutalist field dossier outlining software, automation, and network capabilities for South Texas organizations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dossier">
+      <header class="masthead">
+        <div class="masthead__badge">Corpus Christi Dev Solutions</div>
+        <div class="masthead__grid">
+          <div class="masthead__title">
+            <h1>Enterprise-grade software, automation, and network solutions.</h1>
+            <p>
+              We provide support for small and large businesses in the coastal bend that need dependable systems and a
+              partner who shows up on-site.
+            </p>
+          </div>
+          <aside class="masthead__meta">
+            <p class="meta__label">Contact</p>
+            <p>
+              <a href="mailto:hello@ccdevsolutions.com">hello@ccdevsolutions.com</a><br />
+              <a href="tel:13615551234">(361) 555-1234</a>
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section">
+          <div class="section__index">scope</div>
+          <div class="section__body section__body--services">
+            <p>
+              We combine product thinking, systems engineering, and network operations to support teams at
+              every stage of delivery.
+            </p>
+            <div class="service-grid">
+              <article>
+                <header>Custom Software</header>
+                <p>Full-stack buildouts for web, desktop, and mobile in regulated or rugged environments.</p>
+                <ul>
+                  <li>web</li>
+                  <li>mobile apps - iOS/Android</li>
+                  <li>desktop apps - Mac/Windows/Linux</li>
+                </ul>
+              </article>
+              <article>
+                <header>Automation &amp; Data</header>
+                <p>Integrate ERP, CRM, and operational data flows with reliable automation your team can own.</p>
+                <ul>
+                  <li>api design + integration</li>
+                  <li>workflow orchestration</li>
+                  <li>dashboards &amp; telemetry</li>
+                </ul>
+              </article>
+              <article>
+                <header>Network Infrastructure</header>
+                <p>Secure wired and wireless infrastructure with remote monitoring and rapid on-site response.</p>
+                <ul>
+                  <li>site surveys &amp; wi-fi design</li>
+                  <li>firewall / vpn topology</li>
+                  <li>observability + alerting</li>
+                </ul>
+              </article>
+              <article>
+                <header>Managed IT</header>
+                <p>Device lifecycle, vendor coordination, and support programs tuned to your operating tempo.</p>
+                <ul>
+                  <li>tiered response plans</li>
+                  <li>patch + compliance cadence</li>
+                  <li>training &amp; documentation</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__index">model</div>
+          <div class="section__body section__body--process">
+            <div class="process">
+              <article>
+                <header>Initial Briefing</header>
+                <p>Tell us about your operational requirements and we will report back to you within 3 days (for a majority of projects) with a brief specification.</p>
+              </article>
+              <article>
+                <header>Blueprint</header>
+                <p>
+                  We provide an architecture briefing that turns our findings into a practical roadmap-aligning stack
+                  choices, security posture, and budget checkpoints before any build work commences.
+                </p>
+              </article>
+              <article>
+                <header>Build &amp; Validate</header>
+                <p>
+                  We build in small batches with monitoring baked in, so you see working software early and
+                  we can react before little issues turn into outages.
+                </p>
+              </article>
+              <article>
+                <header>Sustain</header>
+                <p>
+                  When you want ongoing help, we shape a support program around your team-tuning the care
+                  plan, hosting refresh sessions, and staying on call when you need a second set of eyes.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--cta">
+          <div class="section__index">brief</div>
+          <div class="section__body">
+            <h2>Initiate a project briefing</h2>
+            <div class="cta-actions">
+              <a class="cta-actions__primary" href="mailto:hello@ccdevsolutions.com?subject=Project%20Briefing">Email project details</a>
+              <a class="cta-actions__secondary" href="tel:13615551234">Call the office</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__left">
+          <p>© <span id="year"></span> Corpus Christi Dev Solutions</p>
+        </div>
+        <div class="footer__right"></div>
+      </footer>
+    </div>
+
+    <script>
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
