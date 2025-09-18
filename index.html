@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Corpus Christi Dev Solutions | Field Dossier</title>
+    <title>Corpus Christi Dev Solutions | Dossier</title>
     <meta
       name="description"
-      content="Corpus Christi Dev Solutions presented as a brutalist field dossier outlining software, automation, and network capabilities for South Texas organizations."
+      content=""
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,9 +22,9 @@
         <div class="masthead__badge">Corpus Christi Dev Solutions</div>
         <div class="masthead__grid">
           <div class="masthead__title">
-            <h1>Enterprise-grade software, automation, and network solutions.</h1>
+            <h1 id ="typewriter"></h1>
             <p>
-              We provide support for small and large businesses in the coastal bend that need dependable systems and a
+              We provide turnkey software solutions for small and large businesses in the coastal bend that need dependable systems and a
               partner who shows up on-site.
             </p>
           </div>
@@ -43,7 +43,7 @@
           <div class="section__index">scope</div>
           <div class="section__body section__body--services">
             <p>
-              We combine product thinking, systems engineering, and network operations to support teams at
+              We combine product thinking, systems engineering, and IT expertise to support teams at
               every stage of delivery.
             </p>
             <div class="service-grid">
@@ -66,12 +66,12 @@
                 </ul>
               </article>
               <article>
-                <header>Network Infrastructure</header>
-                <p>Secure wired and wireless infrastructure with remote monitoring and rapid on-site response.</p>
+                <header>Systems Networking</header>
+                <p>Design resilient on-prem and hybrid networks that keep workloads, endpoints, and cloud services synchronized.</p>
                 <ul>
-                  <li>site surveys &amp; wi-fi design</li>
-                  <li>firewall / vpn topology</li>
-                  <li>observability + alerting</li>
+                  <li>core switching &amp; routing architecture</li>
+                  <li>identity-aware access &amp; segmentation</li>
+                  <li>observability pipelines &amp; response playbooks</li>
                 </ul>
               </article>
               <article>
@@ -92,7 +92,7 @@
           <div class="section__body section__body--process">
             <div class="process">
               <article>
-                <header>Initial Briefing</header>
+                <header>Briefing</header>
                 <p>Tell us about your operational requirements and we will report back to you within 3 days (for a majority of projects) with a brief specification.</p>
               </article>
               <article>
@@ -140,11 +140,29 @@
       </footer>
     </div>
 
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script>
       const yearEl = document.getElementById("year");
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
       }
+
+      new Typewriter('#typewriter')
+      .changeDelay(110)
+      .start()
+      .typeString('Consumer')
+      .deleteChars('8')
+      .typeString('Business')
+      .deleteChars('8')
+      .typeString('Enterprise')
+      .typeString('-grade ')
+      .typeString('software')
+      .typeString(', ')
+      .typeString('automation')
+      .typeString(',')
+      .typeString('<br> and ')
+      .typeString('IT solutions');
+      
     </script>
   </body>
 </html>
