@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 596">
+  <rect width="560" height="596" fill="#f8f5f0"/>
+  <rect x="20" y="20" width="120" height="120" fill="#101010"/><rect x="148" y="20" width="120" height="120" fill="#101010"/><rect x="276" y="20" width="120" height="120" fill="#101010"/><rect x="404" y="20" width="120" height="120" fill="#101010"/><rect x="20" y="148" width="120" height="120" fill="#101010"/><rect x="148" y="148" width="120" height="120" fill="#101010"/><rect x="276" y="148" width="120" height="120" fill="#101010"/><rect x="404" y="148" width="120" height="120" fill="#101010"/><rect x="20" y="276" width="120" height="120" fill="#101010"/><rect x="148" y="276" width="120" height="120" fill="#101010"/><rect x="276" y="276" width="120" height="120" fill="#101010"/><rect x="404" y="276" width="120" height="120" fill="#101010"/><rect x="20" y="404" width="120" height="120" fill="#101010"/><rect x="148" y="404" width="120" height="120" fill="#101010"/><rect x="276" y="404" width="120" height="120" fill="#101010"/><rect x="404" y="404" width="120" height="120" fill="#101010"/>
+  <rect x="44.0" y="44.0" width="192.0" height="72.0" fill="#f8f5f0"/><rect x="44.0" y="284.0" width="192.0" height="72.0" fill="#f8f5f0"/><rect x="44.0" y="44.0" width="72.0" height="312.0" fill="#f8f5f0"/><rect x="276" y="148" width="120" height="120" fill="#ff6126"/><rect x="300.0" y="172.0" width="72.0" height="72.0" fill="#f8f5f0"/>
+  <rect x="20" y="535.0" width="504" height="6" fill="#101010"/>
+  <text x="280" y="574" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="800"
+        font-size="28" letter-spacing="6" fill="#101010">CORPUS CONCORD</text>
+</svg>
