@@ -143,8 +143,8 @@ body {
   padding: clamp(0.5rem, 1vw, 0.75rem);
   background: var(--surface-subtle);
   border: var(--border-3) solid var(--color-border);
-  /* Scale the offset shadow with the logo size for consistent look */
-  box-shadow: var(--brand-shadow-offset) var(--brand-shadow-offset) 0 var(--color-ink);
+  /* No drop shadow for a cleaner, flat panel */
+  box-shadow: none;
   width: var(--brand-size);
   z-index: 1;
 }
@@ -173,7 +173,7 @@ body {
   padding: clamp(0.5rem, 1vw, 0.75rem);
   background: var(--surface-subtle);
   border: var(--border-3) solid var(--color-border);
-  box-shadow: var(--shadow-ink);
+  box-shadow: none;
   width: clamp(140px, 16vw, 240px);
   z-index: 1;
 }
@@ -188,7 +188,7 @@ body {
   padding: clamp(0.5rem, 1vw, 0.75rem);
   background: var(--surface-subtle);
   border: var(--border-3) solid var(--color-border);
-  box-shadow: var(--shadow-ink);
+  box-shadow: none;
   width: clamp(140px, 16vw, 240px);
   z-index: 1;
 }
