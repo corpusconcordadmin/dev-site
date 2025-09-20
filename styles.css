@@ -16,6 +16,8 @@
   --surface-base: var(--color-bg);
   --surface-subtle: #fdfbf7;
   --surface-raised: #ffffff;
+  --surface-contrast: var(--color-ink);
+  --on-contrast: #fdfbf7;
 
   /* Typography */
   --font-sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
@@ -340,19 +342,19 @@ body {
 }
 
 .section--cta .section__body {
-  background: var(--color-ink);
-  color: #fdfbf7;
+  background: var(--surface-contrast);
+  color: var(--on-contrast);
   padding: clamp(1.8rem, 3vw, 2.6rem);
   border: var(--border-2) solid var(--color-border);
   box-shadow: var(--shadow-base);
 }
 
 .section--cta .section__body h2 {
-  color: #fdfbf7;
+  color: var(--on-contrast);
 }
 
 .section--cta .section__body p {
-  color: rgba(255, 255, 255, 0.82);
+  color: color-mix(in oklab, var(--on-contrast), transparent 18%);
 }
 
 .cta-actions {
@@ -373,8 +375,8 @@ body {
 }
 
 .cta-actions__primary {
-  background: #fdfbf7;
-  color: var(--color-ink);
+  background: var(--on-contrast);
+  color: var(--surface-contrast);
 }
 
 .cta-actions__primary:hover,
@@ -384,7 +386,7 @@ body {
 }
 
 .cta-actions__secondary {
-  color: #fdfbf7;
+  color: var(--on-contrast);
 }
 
 .cta-actions__secondary:hover,
@@ -588,5 +590,7 @@ body {
     --surface-base: #161613;
     --surface-subtle: #1b1b17;
     --surface-raised: #22221d;
+    --surface-contrast: #0f0f0d;
+    --on-contrast: #f4f1eb;
   }
 }
