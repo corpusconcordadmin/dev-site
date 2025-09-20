@@ -118,6 +118,9 @@ body {
   gap: clamp(1.8rem, 3vw, 3rem);
 }
 
+/* Allow grid children to shrink inside the masthead without forcing overflow */
+.masthead__grid > * { min-width: 0; }
+
 .masthead__title h1 {
   margin: 0 0 1rem;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
@@ -153,6 +156,12 @@ body {
 
 .masthead__meta p {
   margin: 0;
+}
+
+/* Prevent long emails/URLs from bleeding outside the container */
+.masthead__meta a {
+  overflow-wrap: anywhere; /* modern, safe */
+  word-break: break-word;  /* legacy fallback */
 }
 
 .content {
