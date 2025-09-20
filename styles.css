@@ -97,6 +97,17 @@ body {
   gap: 2rem;
   box-shadow: var(--shadow-ink);
   white-space: normal;
+  position: relative;
+  overflow: visible;
+}
+
+/* Reserve space for the floating brand so content doesn't collide */
+.masthead--logo-float {
+  --brand-size: clamp(120px, 14vw, 220px);
+  --brand-gutter: clamp(12px, 1.2vw, 18px);
+  --brand-shadow-offset: clamp(6px, calc(var(--brand-size) * 0.08), 12px);
+  /* Reserve full width of the panel plus a small gutter */
+  padding-right: calc(var(--brand-size) + var(--brand-gutter));
 }
 
 .masthead__badge {
@@ -116,10 +127,72 @@ body {
   display: grid;
   grid-template-columns: minmax(280px, 2fr) minmax(200px, 1fr);
   gap: clamp(1.8rem, 3vw, 3rem);
+  align-items: start;
 }
 
 /* Allow grid children to shrink inside the masthead without forcing overflow */
 .masthead__grid > * { min-width: 0; }
+
+/* Floating brand panel (outside top-right corner) */
+.masthead--logo-float .masthead__brand {
+  position: absolute;
+  top: calc(var(--brand-gutter) * -0.4);
+  right: calc(var(--brand-gutter) * -1);
+  display: grid;
+  place-items: center;
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  background: var(--surface-subtle);
+  border: var(--border-3) solid var(--color-border);
+  /* Scale the offset shadow with the logo size for consistent look */
+  box-shadow: var(--brand-shadow-offset) var(--brand-shadow-offset) 0 var(--color-ink);
+  width: var(--brand-size);
+  z-index: 1;
+}
+.masthead--logo-float .masthead__brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive tuning to avoid crowding at mid widths */
+@media (max-width: 1024px) {
+  .masthead--logo-float { --brand-size: clamp(110px, 12vw, 180px); --brand-gutter: clamp(10px, 1vw, 16px); --brand-shadow-offset: clamp(6px, calc(var(--brand-size) * 0.08), 12px); }
+}
+@media (max-width: 880px) {
+  .masthead--logo-float { --brand-size: clamp(96px, 11vw, 160px); --brand-gutter: clamp(8px, 0.9vw, 14px); --brand-shadow-offset: clamp(5px, calc(var(--brand-size) * 0.08), 10px); }
+}
+
+/* Alternative placements (toggle class on .masthead) */
+.masthead--logo-edge .masthead__brand {
+  position: absolute;
+  top: 50%;
+  right: clamp(-0.6rem, -1.2vw, -0.4rem);
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  background: var(--surface-subtle);
+  border: var(--border-3) solid var(--color-border);
+  box-shadow: var(--shadow-ink);
+  width: clamp(140px, 16vw, 240px);
+  z-index: 1;
+}
+.masthead--logo-edge .masthead__brand img { width: 100%; height: auto; }
+
+.masthead--logo-bottom .masthead__brand {
+  position: absolute;
+  bottom: clamp(-0.6rem, -1.2vw, -0.4rem);
+  right: clamp(-0.6rem, -1.2vw, -0.4rem);
+  display: grid;
+  place-items: center;
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  background: var(--surface-subtle);
+  border: var(--border-3) solid var(--color-border);
+  box-shadow: var(--shadow-ink);
+  width: clamp(140px, 16vw, 240px);
+  z-index: 1;
+}
+.masthead--logo-bottom .masthead__brand img { width: 100%; height: auto; }
 
 .masthead__title h1 {
   margin: 0 0 1rem;
@@ -447,6 +520,9 @@ body {
   .masthead__grid {
     grid-template-columns: 1fr;
   }
+
+  /* Hide the brand column on small screens to keep the layout clean */
+  .masthead__brand { display: none; }
 
   .masthead__meta {
     grid-template-columns: auto 1fr;
