@@ -414,11 +414,15 @@ body {
   padding-top: 1.2rem;
   justify-content: space-between;
   font-size: var(--fs-sm);
+  /* Let columns size to their own content height (no equal-height stretch) */
+  align-items: flex-start;
 }
 
 .footer__left,
 .footer__right {
-  flex: 1 1 280px;
+  /* Shrink-wrap width and height to content by default */
+  flex: 0 0 auto;
+  align-self: flex-start;
 }
 
 @media (max-width: 720px) {
@@ -461,6 +465,14 @@ body {
 
   .footer {
     flex-direction: column;
+    /* On mobile, keep children stretched to full width */
+    align-items: stretch;
+  }
+  .footer__left,
+  .footer__right {
+    flex: 1 1 auto;
+    align-self: stretch;
+    width: 100%;
   }
 }
 
