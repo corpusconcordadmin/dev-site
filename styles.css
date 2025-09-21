@@ -322,6 +322,16 @@ body {
   font-size: var(--fs-sm);
 }
 
+/* Increase spacing for headings within stacked styleguide sections
+   Ensures headings like "Typography" have more breathing room above/below
+   without affecting non-stacked sections elsewhere. */
+.section__body.stack > * + h2 { /* extra space before a heading */
+  margin-top: var(--space-6);
+}
+.section__body.stack > h2 + * { /* extra space after a heading */
+  margin-top: var(--space-5);
+}
+
 .section__body p {
   margin: 0 0 1.2rem;
   max-width: 42rem;

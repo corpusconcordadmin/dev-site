@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY3WNKCZ63"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TY3WNKCZ63');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Corpus Concord | Design Language</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dossier">
+      <header class="masthead">
+        <div class="masthead__badge">Corpus Concord</div>
+        <div class="masthead__grid">
+          <div class="masthead__title">
+            <h1>Design Language</h1>
+            <p class="lead">A concise reference for tokens, type, spacing, utilities, and core components used across the site.</p>
+          </div>
+          <aside class="masthead__meta">
+            <p class="meta__label">Reference</p>
+            <p>
+              <a href="./index.html">Back to site</a>
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section">
+          <div class="section__index">tokens</div>
+          <div class="section__body stack" style="--stack-space: 1rem;">
+            <h2>Color</h2>
+            <div class="grid" style="--grid-min: 220px; --grid-gap: 1rem;">
+              <div class="card">
+                <div class="eyebrow">--color-bg <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#f8f5f0</span></div>
+                <div style="background: #f8f5f0; border: var(--border-1) solid #1a1a18; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-ink <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#101010</span></div>
+                <div style="background: #101010; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-muted <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#4b4946</span></div>
+                <div style="background: #4b4946; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-accent <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#ff6126</span></div>
+                <div style="background: #ff6126; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-accent-dark <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#c23f11</span></div>
+                <div style="background: #c23f11; height: 48px;"></div>
+              </div>
+            </div>
+
+            <h2>Color - Dark Theme</h2>
+            <div class="grid" style="--grid-min: 220px; --grid-gap: 1rem;">
+              <div class="card">
+                <div class="eyebrow">--color-bg <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#11110f</span></div>
+                <div style="background: #11110f; border: var(--border-1) solid #e6e0d8; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-ink <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#f4f1eb</span></div>
+                <div style="background: #f4f1eb; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-muted <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#b7b3ad</span></div>
+                <div style="background: #b7b3ad; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-accent <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#ff6126</span></div>
+                <div style="background: #ff6126; height: 48px;"></div>
+              </div>
+              <div class="card">
+                <div class="eyebrow">--color-accent-dark <span class="text-muted" style="letter-spacing:0; text-transform:none; font-family: var(--font-mono);">#c23f11</span></div>
+                <div style="background: #c23f11; height: 48px;"></div>
+              </div>
+            </div>
+
+            <h2>Typography</h2>
+            <div class="stack" style="--stack-space: 0.6rem;">
+              <div class="eyebrow">Eyebrow Label</div>
+              <div style="font-size: var(--fs-2xl); line-height: var(--lh-tight); font-weight: 700;">Display XL - Barlow</div>
+              <div style="font-size: var(--fs-xl); line-height: var(--lh-tight); font-weight: 700;">Heading XL - Barlow</div>
+              <div style="font-size: var(--fs-lg); line-height: var(--lh-snug); font-weight: 600;">Heading L - Barlow</div>
+              <p class="lead">Lead paragraph - supports concise summaries and intros.</p>
+              <p style="font-size: var(--fs-md); line-height: var(--lh-normal);">Body - default size, balanced for readability on all screens.</p>
+              <p style="font-family: var(--font-mono); font-size: var(--fs-sm);">Mono - Roboto Mono for metadata, labels, and UI affordances.</p>
+            </div>
+
+            <h2>Spacing</h2>
+            <div class="stack">
+              <div class="cluster" style="--cluster-gap: 0.75rem; align-items: flex-end;">
+                <div><div class="badge">--space-1</div><div style="height: var(--space-1); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-2</div><div style="height: var(--space-2); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-3</div><div style="height: var(--space-3); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-4</div><div style="height: var(--space-4); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-5</div><div style="height: var(--space-5); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-6</div><div style="height: var(--space-6); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-7</div><div style="height: var(--space-7); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-8</div><div style="height: var(--space-8); width: 80px; background: var(--color-accent);"></div></div>
+                <div><div class="badge">--space-9</div><div style="height: var(--space-9); width: 80px; background: var(--color-accent);"></div></div>
+              </div>
+              <p class="text-muted">Use --space-4 as default gap; scale up/down symmetrically.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__index">utilities</div>
+          <div class="section__body stack" style="--stack-space: 1rem;">
+            <h2>Layout helpers</h2>
+            <div class="card">
+              <div class="eyebrow">.stack</div>
+              <div class="stack" style="--stack-space: 0.5rem;">
+                <div>Item A</div>
+                <div>Item B</div>
+                <div>Item C</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="eyebrow">.cluster</div>
+              <div class="cluster" style="--cluster-gap: 0.75rem;">
+                <span class="badge">Chip</span>
+                <span class="badge">Token</span>
+                <span class="badge">Meta</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--cta">
+          <div class="section__index">components</div>
+          <div class="section__body">
+            <h2>Buttons & Cards</h2>
+            <p class="text-muted">Use the button styles for call-to-actions. Cards suit grouped content and lists.</p>
+            <div class="cta-actions">
+              <a class="btn btn--solid" href="#">Primary Button</a>
+              <a class="btn btn--ghost" href="#">Ghost Button</a>
+            </div>
+            <div class="grid" style="--grid-min: 260px; --grid-gap: 1rem; margin-top: 1.4rem;">
+              <article class="card">
+                <header style="font-weight: 600; font-size: var(--fs-lg);">Card Title</header>
+                <p class="text-muted" style="margin: 0.5rem 0 0;">Card body copy demonstrating the default text rhythm.</p>
+              </article>
+              <article class="card">
+                <header style="font-weight: 600; font-size: var(--fs-lg);">Card Title</header>
+                <p class="text-muted" style="margin: 0.5rem 0 0;">Cards inherit surface and border tokens for consistency.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__left">
+          <p>© <span id="year"></span> Corpus Concord</p>
+        </div>
+        <div class="footer__right"></div>
+      </footer>
+    </div>
+
+    <script>
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
